@@ -1,0 +1,13 @@
+CREATE TABLE `poetdb`.`poet` (
+name varchar(20),
+dynasty varchar(10),
+author varchar(5),
+content text,
+tag text,
+fanyi text,
+zhushi text,
+cankao text,
+shangxi text
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
