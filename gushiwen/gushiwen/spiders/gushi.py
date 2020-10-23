@@ -144,7 +144,6 @@ class GushiSpider(scrapy.Spider):
                 shangxi+=remove_tags(item.replace("</p>","/n"))
         self.n+=1
         itemDict.update({"shangxi":shangxi,"n":self.n})
-        print("FFFFFFFFFFFFFFFFFFFFF","FFFFFFFFFFFFF")
        # print("PoetPPPPPP",str(itemDict))
 
         yield itemDict
