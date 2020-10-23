@@ -7,7 +7,7 @@ class TagPipeline(object):
     	json.dump(self.content,fp=self.f,indent=4)
     	self.f.close()
     def process_otem(self,item,spider):
-		con=MySQLdb.connect(host='39.106.193.194',user='park',passwd='park',db='poetdb',port=3306,charset='utf8')
+		con=MySQLdb.connect(host='xx.xx.xx.xx',user='xx',passwd='xx',db='xx',port=xx,charset='utf8')
 		cur=con.cursor()
 		cur.execute('insert into Tag values(%s,%s)',("形式",item['style']))
 		con.commit()
