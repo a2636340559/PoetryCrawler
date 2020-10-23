@@ -16,7 +16,8 @@ class GushiwenPipeline(object):
 		self.f.close()
 	def process_item(self,item,spider):
 		"""
-		con=MySQLdb.connect(host='39.106.193.194',user='park',passwd='park',db='poetdb',port=3306,charset='utf8')
+		#数据库请用自己的地址替换
+		con=MySQLdb.connect(host='xx.xx.xx.xx',user='xx',passwd='xx',db='xx',port=xx,charset='utf8')
 		cur=con.cursor()
 		cur.execute('insert into Tag values(%s,%s)',("形式",item['style']))
 		con.commit()
@@ -33,7 +34,7 @@ class AuthorPipline(object):
 		json.dump(self.content,fp=self.f,indent=4)
 		self.f.close()
 	def process_item(self,item,spider):
-		#con=MySQLdb.connect(host='39.106.193.194',user='park',passwd='park',db='poetdb',port=3306,charset='utf8')
+		#con=MySQLdb.connect(host='xx.xx.xx.xx',user='xx',passwd='xx',db='xx',port=xx,charset='utf8')
 		#cur=con.cursor()
 		#cur.execute('insert into author values(%s,%s,%s)',(item['name'],item['img'],item['detail']))
 		#con.commit()
@@ -48,7 +49,7 @@ class PoetPipline(object):
 		json.dump(self.content,fp=self.f,indent=4)
 		self.f.close()
 	def process_item(self,item,spider):
-		con=MySQLdb.connect(host='39.106.193.194',user='park',passwd='park',db='poetdb',port=3306,charset='utf8')
+		con=MySQLdb.connect(host='xx.xx.xx.xx',user='xx',passwd='xx',db='xx',port=xx,charset='utf8')
 		cur=con.cursor()
 		cur.execute('insert into poet values(%s,%s,%s,%s,%s,%s,%s,%s,%s)',(item['name'],item['dynasty'],item['author'],item['content'],item['tag'],item['fanyi'],item['zhushi'],item['cankao'],item['shangxi']))
 		con.commit()
